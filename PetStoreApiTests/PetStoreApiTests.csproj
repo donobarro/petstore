@@ -62,7 +62,11 @@
     <Compile Include="RestHelper\Pet.cs" />
     <Compile Include="RestHelper\PetEndpoint.cs" />
     <Compile Include="RestHelper\RestApiHelper.cs" />
+    <Compile Include="RestHelper\Order.cs" />
+    <Compile Include="RestHelper\StoreEndpoint.cs" />
     <Compile Include="RestHelper\Tag.cs" />
+    <Compile Include="RestHelper\User.cs" />
+    <Compile Include="RestHelper\UserEndpoint.cs" />
     <Compile Include="Tests\RestApiTests.cs" />
   </ItemGroup>
   <ItemGroup>

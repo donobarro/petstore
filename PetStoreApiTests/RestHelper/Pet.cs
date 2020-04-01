@@ -8,80 +8,80 @@ namespace PetStoreApiTests.RestHelper
 {
     public class Pet
     {
-        public long id;
-        public Category category;
-        public string name;
-        public List<string> photoUrls;
-        public List<Tag> tags;
-        public string status;
+        private long id { get; set; };
+        private Category category;
+        private string name;
+        private List<string> photoUrls;
+        private List<Tag> tags;
+        private string status;
 
 
-        public long getId()
+        public long GetId()
         {
             return id;
         }
 
-        public Pet setId(long id)
+        public Pet SetId(long id)
         {
             this.id = id;
             return this;
         }
 
-        public Category getCategory()
+        public Category GetCategory()
         {
             return category;
         }
-        public Pet setCategory(Category category)
+        public Pet SetCategory(Category category)
         {
             this.category = category;
             return this;
         }
-        public string getName()
+        public string GetName()
         {
             return name;
         }
-        public Pet setName(string name)
+        public Pet SetName(string name)
         {
             this.name = name;
             return this;
         }
-        public List<string> getPhotoUrls()
+        public List<string> GetPhotoUrls()
         {
             return photoUrls;
         }
-        public Pet setPhotoUrls(List<string> photoUrls)
+        public Pet SetPhotoUrls(List<string> photoUrls)
         {
             this.photoUrls = photoUrls;
             return this;
         }
 
-        public Pet addPhotoUrl(string photoUrl)
+        public Pet AddPhotoUrl(string photoUrl)
         {
             this.photoUrls = new List<string>();
             this.photoUrls.Add(photoUrl);
             return this;
         }
 
-        public List<Tag> getTags()
+        public List<Tag> GetTags()
         {
             return tags;
         }
-        public Pet setTags(List<Tag> tags)
+        public Pet SetTags(List<Tag> tags)
         {
             this.tags = tags;
             return this;
         }
-        public Pet addTag(Tag tag)
+        public Pet AddTag(Tag tag)
         {
             this.tags = new List<Tag>();
             this.tags.Add(tag);
             return this;
         }
-        public string getStatus()
+        public string GetStatus()
         {
             return status;
         }
-        public Pet setStatus(string status)
+        public Pet SetStatus(string status)
         {
             this.status = status;
             return this;
