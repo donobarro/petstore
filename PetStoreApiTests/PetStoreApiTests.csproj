@@ -55,18 +55,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RestHelper\Category.cs" />
-    <Compile Include="RestHelper\Endpoint.cs" />
-    <Compile Include="RestHelper\Pet.cs" />
-    <Compile Include="RestHelper\PetEndpoint.cs" />
+    <Compile Include="RestHelper\Model\Category.cs" />
+    <Compile Include="RestHelper\Endpoints\Endpoint.cs" />
+    <Compile Include="RestHelper\Model\Pet.cs" />
+    <Compile Include="RestHelper\Endpoints\PetEndpoint.cs" />
     <Compile Include="RestHelper\RestApiHelper.cs" />
-    <Compile Include="RestHelper\Order.cs" />
-    <Compile Include="RestHelper\StoreEndpoint.cs" />
-    <Compile Include="RestHelper\Tag.cs" />
-    <Compile Include="RestHelper\User.cs" />
-    <Compile Include="RestHelper\UserEndpoint.cs" />
+    <Compile Include="RestHelper\Model\Order.cs" />
+    <Compile Include="RestHelper\Endpoints\StoreEndpoint.cs" />
+    <Compile Include="RestHelper\Model\Tag.cs" />
+    <Compile Include="RestHelper\Model\User.cs" />
+    <Compile Include="RestHelper\Endpoints\UserEndpoint.cs" />
     <Compile Include="Tests\PetTests.cs" />
     <Compile Include="Tests\StoreTests.cs" />
     <Compile Include="Tests\TestBase.cs" />
