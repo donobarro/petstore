@@ -2,8 +2,8 @@
 {
     public class Tag
     {
-        private long id;
-        private string name;
+        public long id;
+        public string name;
 
         public long getId()
         {

@@ -8,12 +8,12 @@ namespace PetStoreApiTests.RestHelper
 {
     public class Pet
     {
-        private long id { get; set; };
-        private Category category;
-        private string name;
-        private List<string> photoUrls;
-        private List<Tag> tags;
-        private string status;
+        public long id;
+        public Category category;
+        public string name;
+        public List<string> photoUrls;
+        public List<Tag> tags;
+        public string status;
 
 
         public long GetId()

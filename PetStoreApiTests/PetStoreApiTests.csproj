@@ -67,7 +67,10 @@
     <Compile Include="RestHelper\Tag.cs" />
     <Compile Include="RestHelper\User.cs" />
     <Compile Include="RestHelper\UserEndpoint.cs" />
-    <Compile Include="Tests\RestApiTests.cs" />
+    <Compile Include="Tests\PetTests.cs" />
+    <Compile Include="Tests\StoreTests.cs" />
+    <Compile Include="Tests\TestBase.cs" />
+    <Compile Include="Tests\UserTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

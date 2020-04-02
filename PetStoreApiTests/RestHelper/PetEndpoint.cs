@@ -1,13 +1,6 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PetStoreApiTests.RestHelper
 {
@@ -25,20 +18,20 @@ namespace PetStoreApiTests.RestHelper
             return JsonConvert.DeserializeObject<List<Pet>>(queryresult.Content);
         }
 
-        public IRestResponse Post(Pet pet)
+        public Pet Post(Pet pet)
         {
             string json = JsonConvert.SerializeObject(pet);
             var request = new RestRequest("/pet", Method.POST).AddParameter("application/json; charset=utf-8", json, ParameterType.RequestBody);
             var response = client.Execute(request);
-            return response;
+            return JsonConvert.DeserializeObject<Pet>(response.Content);
         }
 
-        public IRestResponse Put(Pet pet)
+        public Pet Put(Pet pet)
         {
             string json = JsonConvert.SerializeObject(pet);
             var request = new RestRequest("/pet", Method.PUT).AddParameter("application/json; charset=utf-8", json, ParameterType.RequestBody);
             var response = client.Execute(request);
-            return response;
+            return JsonConvert.DeserializeObject<Pet>(response.Content);
         }
 
         public Pet Get(long id)
@@ -48,9 +41,9 @@ namespace PetStoreApiTests.RestHelper
             return JsonConvert.DeserializeObject<Pet>(response.Content);
         }
 
-        public IRestResponse Post(long id)
+        public IRestResponse Post(long id, string name, string status)
         {
-            var request = new RestRequest("/pet/{id}", Method.POST).AddParameter("id", id, ParameterType.UrlSegment).AddParameter("name", "tralala", ParameterType.GetOrPost).AddParameter("status", "available", ParameterType.GetOrPost);
+            var request = new RestRequest("/pet/{id}", Method.POST).AddHeader("Content-Type", "application/x-www-form-urlencoded").AddParameter("id", id, ParameterType.UrlSegment).AddParameter("name", name, ParameterType.GetOrPost).AddParameter("status", status, ParameterType.GetOrPost);
             var response = client.Execute(request);
             return response;
         }
@@ -62,14 +55,14 @@ namespace PetStoreApiTests.RestHelper
             return response;
         }
 
-        public IRestResponse UploadImage(long id)
+        public IRestResponse UploadImage(long id, string pathToImage)
         {
             
             var request = new RestRequest("/pet/{id}/uploadImage", Method.POST)
                 .AddParameter("id", id, ParameterType.UrlSegment)
                 .AddHeader("Accept",  "application/json")
                 .AddHeader("Content-Type", "multipart/form-data")
-                .AddFile("file", AppDomain.CurrentDomain.BaseDirectory + "/image.jpg");
+                .AddFile("file", pathToImage);
             var response = client.Execute(request);
             return response;
         }

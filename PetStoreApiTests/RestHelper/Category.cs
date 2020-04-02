@@ -2,8 +2,8 @@
 {
     public class Category
     {
-        long id;
-        string name;
+        public long id;
+        public string name;
 
         public long getId()
         {

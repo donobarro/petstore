@@ -8,14 +8,14 @@ namespace PetStoreApiTests.RestHelper
 {
     class User
     {
-        private long id;
-        private string username;
-        private string firstName;
-        private string lastName;
-        private string email;
-        private string password;
-        private string phone;
-        private long userStatus;
+        public long id;
+        public string username;
+        public string firstName;
+        public string lastName;
+        public string email;
+        public string password;
+        public string phone;
+        public long userStatus;
 
         public long GetId() { return id; }
         public string GetUsername() { return username; }

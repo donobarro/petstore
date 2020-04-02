@@ -8,12 +8,12 @@ namespace PetStoreApiTests.RestHelper
 {
     class Order
     {
-        private long id;
-        private long petId;
-        private long quantity;
-        private DateTime shipDate;
-        private string status;
-        private bool complete;
+        public long id;
+        public long petId;
+        public long quantity;
+        public DateTime shipDate;
+        public string status;
+        public bool complete;
 
         public long GetId()
         {
